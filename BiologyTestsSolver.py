@@ -9,6 +9,7 @@ class GoogleFormParser(object):
         self.email = email
         self.class_letter = class_letter
         self.name = name
+        
     # Собираем все функции в одной
     def parse(self):
         self.go_to_forms_page()
@@ -88,8 +89,8 @@ driver = webdriver.Chrome()
 parser = GoogleFormParser(
     driver=driver,
     link='https://docs.google.com/forms/d/e/1FAIpQLSfzGU0C8qpeC9eabn_mKTmkba60kGUn0ukWTgXslpz1pg06XQ/viewform',
-    email='kirill.ankudinov.94@mail.ru',
+    email='email',
     class_letter='9б',
-    name='Анкудинов Кирилл'
+    name='Name'
 )
 parser.parse()
